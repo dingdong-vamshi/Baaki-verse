@@ -1,0 +1,236 @@
+.homepage {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    /* background-color: #f7f7f7; /* Light background for homepage */
+  } 
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .homepage-overlay {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    color: white;
+    width: 90%;
+    max-width: 450px;
+    animation: fadeInUp 2s forwards;
+  }
+  
+  .welcome-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, darkred, #ff4d4d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 2s forwards;
+  }
+  
+  .subtitle {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    animation: fadeInUp 2.2s forwards;
+  }
+  
+  .create-trip-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(to right, darkred, #ff4d4d);
+    color: white;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+  
+  .create-trip-btn:hover {
+    background: linear-gradient(to right, #a30000, #ff3333);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
+  }
+  
+  /* Popup Styles */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    animation: fadeIn 0.3s forwards;
+  }
+  
+  .trip-form-popup {
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 12px;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.4s forwards;
+    /* Removed the black box background */
+  }
+  
+  .popup-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+  }
+  
+  .trip-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .trip-input {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .trip-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .trip-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 77, 77, 0.6);
+  }
+  
+  .date-container {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .date-container .form-group {
+    flex: 1;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .cancel-btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .cancel-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .submit-trip-btn {
+    flex: 2;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(to right, darkred, #ff4d4d);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-trip-btn:hover {
+    background: linear-gradient(to right, #a30000, #ff3333);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.4);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(255, 77, 77, 0);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(255, 77, 77, 0);
+    }
+  }

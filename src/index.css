@@ -1,0 +1,248 @@
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  position: relative; /* Ensure elements are above the video */
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send the video to the back */
+  object-fit: cover; /* Make sure the video covers the screen */
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Input and Form Styles */
+input, select, button {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  margin-bottom: 12px;
+  width: 100%;
+  font-size: 16px;
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+input:focus, select:focus, button:focus {
+  outline: none;
+  border-color: #1db954; /* Spotify Green */
+}
+
+input, select {
+  background-color: #222;
+}
+
+button {
+  background-color: #1db954; /* Spotify Green */
+  color: #fff;
+  border: none;
+}
+
+button.secondary {
+  background-color: #28a745;
+}
+
+button.danger {
+  background-color: #dc3545;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Page Layout */
+.page-container {
+  padding: 40px 0;
+}
+
+/* Login Page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(18, 18, 18, 0.7); /* Transparent dark overlay */
+}
+
+.login-form {
+  background-color: #1c1c1c;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  margin-bottom: 15px;
+}
+
+/* Home Page */
+.home-container {
+  padding: 40px;
+}
+
+.home-container h2 {
+  font-size: 2rem;
+  color: #e0e0e0;
+}
+
+.home-container button {
+  width: auto;
+  margin-top: 10px;
+  background-color: #28a745;
+}
+
+/* Trip Page */
+.trip-container {
+  padding: 40px;
+  background-color: #1c1c1c;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+}
+
+.trip-container h2 {
+  color: #e0e0e0;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  background-color: #333;
+  color: #fff;
+  flex: 1;
+  margin-right: 10px;
+  padding: 12px;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+}
+
+.tab-buttons button:last-child {
+  margin-right: 0;
+}
+
+.tab-buttons button.active {
+  background-color: #1db954;
+}
+
+.expense-form-container {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 500px;
+}
+
+.expense-form-container input, .expense-form-container select {
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #444;
+}
+
+.expense-form-container button {
+  background-color: #1db954;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.expense-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.expense-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+.expense-item:last-child {
+  border-bottom: none;
+}
+
+.expense-summary {
+  margin-top: 20px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Members Input */
+.members-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.members-container input {
+  flex: 1;
+}
+
+.members-container button {
+  margin-left: 10px;
+}
+
+.balance-history {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.balance-item {
+  margin-bottom: 10px;
+}
+
+.total-summary {
+  margin-top: 30px;
+}
+
+.total-summary ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.total-summary li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #1db954;
+}

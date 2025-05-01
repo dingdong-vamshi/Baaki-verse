@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.landing-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.sub-heading {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+  animation: fadeInUp 2s forwards;
+}
+
+.main-heading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+  opacity: 0;
+
+  background: linear-gradient(90deg, #8B0000, #FF4D4D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: popInWithUnderline 2s ease forwards;
+}
+
+.main-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineSlideIn 2s ease forwards;
+}
+
+.animated-text-description {
+  font-size: 1.5rem;
+  margin: 20px 0 30px;
+  opacity: 0;
+  animation: fadeInUp 3s 1.2s forwards;
+}
+
+.login-button {
+  background: linear-gradient(90deg, #8B0000, #FF4D4D);
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background: linear-gradient(90deg, #a80000, #ff6666);
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popInWithUnderline {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes underlineSlideIn {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
