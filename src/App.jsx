@@ -5,13 +5,14 @@ import LoginPage from './components/LoginPage';
 import HomePage from './components/HomePage';
 import TripPage from './components/TripPage';
 import LandingPage from './components/LandingPage';  // Import Landing Page
-
+import SplashCursor from './components/Animations/SplashCursor/SplashCursor.jsx'
 function App() {
   const [user, setUser] = useState(null); 
   const [trip, setTrip] = useState(null);
  
   return (
     <Router>
+      <SplashCursor/>
       <Routes>
         <Route path="/" element={<LandingPage />} />  {/* Route to Landing Page */}
         <Route path="/login" element={<LoginPage onLogin={setUser} />} />  {/* Route to Login Page */}
